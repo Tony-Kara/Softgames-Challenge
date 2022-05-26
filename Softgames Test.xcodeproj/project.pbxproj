@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEC2DC1D284014A3006EA898 /* sampleweb.html in Resources */ = {isa = PBXBuildFile; fileRef = CEC2DC1C284014A3006EA898 /* sampleweb.html */; };
 		CEEF2108283E170300D8FEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF2107283E170300D8FEB0 /* AppDelegate.swift */; };
 		CEEF210A283E170300D8FEB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */; };
 		CEEF210C283E170300D8FEB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF210B283E170300D8FEB0 /* ViewController.swift */; };
-		CEEF210F283E170300D8FEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEF210D283E170300D8FEB0 /* Main.storyboard */; };
 		CEEF2111283E170400D8FEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEF2110283E170400D8FEB0 /* Assets.xcassets */; };
 		CEEF2114283E170400D8FEB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEF2112283E170400D8FEB0 /* LaunchScreen.storyboard */; };
+		CEEF2124283E3D3F00D8FEB0 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF2123283E3D3F00D8FEB0 /* FormView.swift */; };
+		CEEF2129283E527D00D8FEB0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = CEEF2126283E527D00D8FEB0 /* index.html */; };
+		CEEF212A283E527D00D8FEB0 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = CEEF2128283E527D00D8FEB0 /* script.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEC2DC1C284014A3006EA898 /* sampleweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleweb.html; sourceTree = "<group>"; };
 		CEEF2104283E170300D8FEB0 /* Softgames Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Softgames Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEF2107283E170300D8FEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEEF210B283E170300D8FEB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEEF210E283E170300D8FEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEEF2110283E170400D8FEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEEF2113283E170400D8FEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEEF2115283E170400D8FEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEEF2123283E3D3F00D8FEB0 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		CEEF2126283E527D00D8FEB0 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		CEEF2128283E527D00D8FEB0 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		CEEF2106283E170300D8FEB0 /* Softgames Test */ = {
 			isa = PBXGroup;
 			children = (
+				CEC2DC1C284014A3006EA898 /* sampleweb.html */,
+				CEEF2125283E527D00D8FEB0 /* Mytest */,
 				CEEF2107283E170300D8FEB0 /* AppDelegate.swift */,
 				CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */,
 				CEEF210B283E170300D8FEB0 /* ViewController.swift */,
-				CEEF210D283E170300D8FEB0 /* Main.storyboard */,
+				CEEF2123283E3D3F00D8FEB0 /* FormView.swift */,
 				CEEF2110283E170400D8FEB0 /* Assets.xcassets */,
 				CEEF2112283E170400D8FEB0 /* LaunchScreen.storyboard */,
 				CEEF2115283E170400D8FEB0 /* Info.plist */,
 			);
 			path = "Softgames Test";
+			sourceTree = "<group>";
+		};
+		CEEF2125283E527D00D8FEB0 /* Mytest */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF2126283E527D00D8FEB0 /* index.html */,
+				CEEF2127283E527D00D8FEB0 /* js */,
+			);
+			path = Mytest;
+			sourceTree = "<group>";
+		};
+		CEEF2127283E527D00D8FEB0 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF2128283E527D00D8FEB0 /* script.js */,
+			);
+			path = js;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +150,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEF2129283E527D00D8FEB0 /* index.html in Resources */,
+				CEEF212A283E527D00D8FEB0 /* script.js in Resources */,
+				CEC2DC1D284014A3006EA898 /* sampleweb.html in Resources */,
 				CEEF2114283E170400D8FEB0 /* LaunchScreen.storyboard in Resources */,
 				CEEF2111283E170400D8FEB0 /* Assets.xcassets in Resources */,
-				CEEF210F283E170300D8FEB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEF2124283E3D3F00D8FEB0 /* FormView.swift in Sources */,
 				CEEF210C283E170300D8FEB0 /* ViewController.swift in Sources */,
 				CEEF2108283E170300D8FEB0 /* AppDelegate.swift in Sources */,
 				CEEF210A283E170300D8FEB0 /* SceneDelegate.swift in Sources */,
@@ -147,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CEEF210D283E170300D8FEB0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEEF210E283E170300D8FEB0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEEF2112283E170400D8FEB0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +312,6 @@
 				INFOPLIST_FILE = "Softgames Test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +339,6 @@
 				INFOPLIST_FILE = "Softgames Test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
