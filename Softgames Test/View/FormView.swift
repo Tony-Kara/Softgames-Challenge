@@ -17,8 +17,8 @@ class FormView: UIView {
   var dateOfBirth : String?
   var result : String?
   let queue = DispatchQueue.global(qos: .userInitiated)
-   
-    private lazy var titleTextField:UITextField = {
+  
+  private lazy var titleTextField:UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
     textField.placeholder = "Result field * Softgames *"

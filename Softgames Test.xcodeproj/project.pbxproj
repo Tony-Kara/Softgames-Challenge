@@ -53,6 +53,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CEC2DC2328442186006EA898 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF2123283E3D3F00D8FEB0 /* FormView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CEEF20FB283E170200D8FEB0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,13 +80,13 @@
 		CEEF2106283E170300D8FEB0 /* Softgames Test */ = {
 			isa = PBXGroup;
 			children = (
+				CEC2DC1E2843AF83006EA898 /* Model */,
+				CEC2DC2328442186006EA898 /* View */,
 				CEEF2125283E527D00D8FEB0 /* Mytest */,
 				CEEF2107283E170300D8FEB0 /* AppDelegate.swift */,
-				CEC2DC1E2843AF83006EA898 /* Model */,
+				CEEF210B283E170300D8FEB0 /* ViewController.swift */,
 				CEC2DC212843B0D2006EA898 /* Login.css */,
 				CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */,
-				CEEF210B283E170300D8FEB0 /* ViewController.swift */,
-				CEEF2123283E3D3F00D8FEB0 /* FormView.swift */,
 				CEEF2110283E170400D8FEB0 /* Assets.xcassets */,
 				CEEF2112283E170400D8FEB0 /* LaunchScreen.storyboard */,
 				CEEF2115283E170400D8FEB0 /* Info.plist */,
