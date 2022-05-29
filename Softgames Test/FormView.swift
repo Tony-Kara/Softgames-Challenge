@@ -12,8 +12,14 @@ class FormView: UIView {
   
   // MARK: - Public properties
   
-  var sumbitButtonAction : ((UserData) -> ())?
-  func webToiOSDataTransfer(data: UserData) {
+  func webToiOSSync(data: UserData) {
+    titleTextField.text = data.firstName
+//    emailTxtField.text = data.email
+//    lastnameTxtField.text = data.lastname
+    
+  }
+  
+  func webToiOSAysnc(data: UserData) {
     titleTextField.text = data.firstName
 //    emailTxtField.text = data.email
 //    lastnameTxtField.text = data.lastname

@@ -20,9 +20,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
   weak var  delegate : StepByDelegate?
   var jsonString = String()
   var mNativeToWebHandler : String = "sumbitToiOS"
-  var mWebPageName : String = "sampleweb"
-  
-  var mWebPageExtension : String = "html"
+  var NativeToWebHandlerAynsc : String = "sumbitToiOSAsync"
 
 
   let formView = FormView()
@@ -34,42 +32,11 @@ class ViewController: UIViewController, UIWebViewDelegate {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     view.backgroundColor = .white
+    formView.webView.navigationDelegate = self
     loadWebKit()
-    
-    formView.sumbitButtonAction = { userdata in
-        
-//        self.createJsonToPass(email: userdata.email , firstName: userdata.username , lastName: userdata.lastname)
-      self.createJsonToPass(firstName: userdata.firstName, lastName: userdata.lastname, dob: userdata.dob)
-      self.formView.webView.evaluateJavaScript("fillDetails('\(self.jsonString)')") { (any, error) in
-                           
-            print("Error : \(error)")
-        }
-    }
+  
   }
 
-  
-  func createJsonToPass( firstName : String = "" , lastName : String = "" , dob : String ) {
-      
-      let data = ["firstName": firstName , "lastName": lastName, "dob": dob ,] as [String : Any]
-      self.jsonString = createJsonForJavaScript(for: data)
-      
-  }
-  
-  func createJsonForJavaScript(for data: [String : Any]) -> String {
-      var jsonString : String?
-      do {
-          let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-          // here "jsonData" is the dictionary encoded in JSON data
-          
-          jsonString = String(data: jsonData, encoding: .utf8)!
-          jsonString = jsonString?.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\\", with: "")
-          
-      } catch {
-          print(error.localizedDescription)
-      }
-      print(jsonString!)
-      return jsonString!
-  }
   func loadWebKit() {
     if let indexURL = Bundle.main.url(forResource: "index",
                                       withExtension: "html") {
@@ -83,6 +50,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     formView.webView.configuration.userContentController = contentController
     
     formView.webView.configuration.userContentController.add(self, name: mNativeToWebHandler)
+    formView.webView.configuration.userContentController.add(self, name: NativeToWebHandlerAynsc)
   }
 
 }
@@ -101,20 +69,51 @@ extension ViewController : WKScriptMessageHandler {
         if message.name == "sumbitToiOS" {
             self.sumbitToiOS(user: userdata)
         }
+      
+      else if message.name == "sumbitToiOSAsync" {
+        self.sumbitToiOSAsync(user: userdata)
+      }
         
     }
     
     
     func sumbitToiOS(user:UserData){
         //refresh token
-        print("sumbitToiOS")
-        formView.webToiOSDataTransfer(data: user)
+        print("sumbitToiOSSync")
+        formView.webToiOSSync(data: user)
         
     }
+  
+  func sumbitToiOSAsync(user:UserData){
+      //refresh token
+      print("sumbitToiOSAsync")
+    formView.webToiOSAysnc(data: user)
+      
+  }
     
     func endCurrentChat(isEnded: Bool){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+}
+
+//MARK: - Web view delegate methods
+
+extension ViewController : WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+   
+        print("didFinish")
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        print(error.localizedDescription)
+    }
+    
     
     
 }
