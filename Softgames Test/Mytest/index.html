@@ -1,64 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="Login.css" />
+    </head>
 <body>
-    
-<section>
-    <article>
-        <div>
-            <h1>First Name</h1>
-        </div>
-        <div>
-            <label for="uname">FirstName<span style="color: red; font-size: 20px;" ></span></label>
-            <input type="text" id="fname" placeholder="Enter username" pattern="[A,Z], [a,z]" required>
-        </div>
-        <div>
-            <label for="uname">LastName<span style="color: red; font-size: 20px;" ></span></label>
-            <input type="text" id="lname" placeholder="Enter LastName" pattern="[A,Z], [a,z]" required>
-        </div>
-        <div>
-            <label for="uname">Date of birth<span style="color: red; font-size: 20px;" ></span></label>
-            <input type="date" id="dob" placeholder="Enter Date of birth" required>
-        </div>
-        <div>
-          <label for="uname">FirstName<span style="color: red; font-size: 20px;" ></span></label>
-          <input id="inputField" style="height:50px;width:300px;font-size:20pt;" type="text" value="">
-            
-            <label for="uname">LastName<span style="color: red; font-size: 20px;" ></span></label>
-            <input id="lastName" style="height:50px;width:300px;font-size:20pt;" type="text" value="">
-              
-              
-          <input onClick="sendMessage()" style="height:50px;width:300px;font-size:20pt;" type="button"
-                 value="Sync"/>
-          <input onClick="sendMessage()" style="height:50px;width:300px;font-size:20pt;" type="button"
-                        value="Async"/>
-        </div>
-      
-        
-        <div>
-          <script type="text/javascript">
-              
-              function sendMessage(){
+
+        <h1 style = "text-align: center">Web Form for iOS</h1>
+        <div class="container">
+                <div class="inputContainer">
+                  <input class="style" type="email" placeholder="What's your email?" id="email"></input>
+                  <input class="style" type="email" placeholder="First Name" id="firstName"></input>
+                  <input class="style" type="email" placeholder="Last Name" id="lastName"></input>
+                  <div class="sumbitButtons">
+                      <button type="submit" class="style" onclick="sendDetails()"><i>Send Data from Web to iOS</i></button>
+                  </div>
+                </div>
+              </div>
+
+    <script>
+        function fillDetails(jsonData) {
+            console.log('jsonData =' , jsonData);
+            var userData = JSON.parse(jsonData);
+            document.getElementById("email").value = userData["email"];
+            document.getElementById("firstName").value =userData["firstName"];
+            document.getElementById("lastName").value = userData["lastName"];
+        }
+
+        function sendDetails() {
+                   var email = document.getElementById("email").value;
+                   var firstName = document.getElementById("firstName").value;
+                   var lastName = document.getElementById("lastName").value;
+                   var value = {"email":email , "firstName":firstName , "lastName" : lastName}
+
+                   try {
+                       webkit.messageHandlers.sumbitToiOS.postMessage(value);
+                      // webkit.messageHandlers.refreshWebPage.postMessage(dictionary);
+
+               } catch(err) {
+                       console.log('error');
+                    }
+               }
                   
-                  var valueReceived =  document.getElementById("inputField").value;
-                  window.webkit.messageHandlers.jsMessageHandler.postMessage(valueReceived);
-                  
-              }
+    </script>
 
-          </script>
-      
-<!--          <input onClick="sendMessage()" style="height:50px;width:300px;font-size:20pt;" type="button"-->
-<!--                 value="Async"/>-->
-        </div>
-    </article>
-</section>
-
-
-    <script src="js/script.js"></script>
 </body>
 </html>
+

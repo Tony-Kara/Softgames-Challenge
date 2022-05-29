@@ -12,6 +12,14 @@ class FormView: UIView {
   
   // MARK: - Public properties
   
+  var sumbitButtonAction : ((UserData) -> ())?
+  func webToiOSDataTransfer(data: UserData) {
+    titleTextField.text = data.username
+//    emailTxtField.text = data.email
+//    lastnameTxtField.text = data.lastname
+    
+  }
+  
    var webView: WKWebView = {
       let webConfiguration = WKWebViewConfiguration()
       let webView = WKWebView(frame: .zero, configuration: webConfiguration)

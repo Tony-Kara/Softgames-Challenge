@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEC2DC202843AF83006EA898 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2DC1F2843AF83006EA898 /* UserData.swift */; };
+		CEC2DC222843B0D2006EA898 /* Login.css in Resources */ = {isa = PBXBuildFile; fileRef = CEC2DC212843B0D2006EA898 /* Login.css */; };
 		CEEF2108283E170300D8FEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF2107283E170300D8FEB0 /* AppDelegate.swift */; };
 		CEEF210A283E170300D8FEB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */; };
 		CEEF210C283E170300D8FEB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF210B283E170300D8FEB0 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEC2DC1F2843AF83006EA898 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		CEC2DC212843B0D2006EA898 /* Login.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Login.css; sourceTree = "<group>"; };
 		CEEF2104283E170300D8FEB0 /* Softgames Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Softgames Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEF2107283E170300D8FEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEC2DC1E2843AF83006EA898 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2DC1F2843AF83006EA898 /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CEEF20FB283E170200D8FEB0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +74,8 @@
 			children = (
 				CEEF2125283E527D00D8FEB0 /* Mytest */,
 				CEEF2107283E170300D8FEB0 /* AppDelegate.swift */,
+				CEC2DC1E2843AF83006EA898 /* Model */,
+				CEC2DC212843B0D2006EA898 /* Login.css */,
 				CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */,
 				CEEF210B283E170300D8FEB0 /* ViewController.swift */,
 				CEEF2123283E3D3F00D8FEB0 /* FormView.swift */,
@@ -150,6 +164,7 @@
 				CEEF2129283E527D00D8FEB0 /* index.html in Resources */,
 				CEEF212A283E527D00D8FEB0 /* script.js in Resources */,
 				CEEF2114283E170400D8FEB0 /* LaunchScreen.storyboard in Resources */,
+				CEC2DC222843B0D2006EA898 /* Login.css in Resources */,
 				CEEF2111283E170400D8FEB0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +179,7 @@
 				CEEF2124283E3D3F00D8FEB0 /* FormView.swift in Sources */,
 				CEEF210C283E170300D8FEB0 /* ViewController.swift in Sources */,
 				CEEF2108283E170300D8FEB0 /* AppDelegate.swift in Sources */,
+				CEC2DC202843AF83006EA898 /* UserData.swift in Sources */,
 				CEEF210A283E170300D8FEB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
