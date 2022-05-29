@@ -5,12 +5,15 @@
     </head>
 <body>
 
-        <h1 style = "text-align: center">Web Form for iOS</h1>
+        <h1 style = "text-align: center">SOFTGAMES</h1>
         <div class="container">
                 <div class="inputContainer">
-                  <input class="style" type="email" placeholder="What's your email?" id="email"></input>
-                  <input class="style" type="email" placeholder="First Name" id="firstName"></input>
-                  <input class="style" type="email" placeholder="Last Name" id="lastName"></input>
+                  <input class="style" type="text" placeholder="First Name" id="firstName"></input>
+                  <input class="style" type="text" placeholder="Last Name" id="lastName"></input>
+                  
+                  <input class="style" type="date" placeholder="" id="dob"></input>
+              
+                 
                   <div class="sumbitButtons">
                       <button type="submit" class="style" onclick="sendDetails()"><i>Send Data from Web to iOS</i></button>
                   </div>
@@ -27,10 +30,11 @@
         }
 
         function sendDetails() {
-                   var email = document.getElementById("email").value;
-                   var firstName = document.getElementById("firstName").value;
-                   var lastName = document.getElementById("lastName").value;
-                   var value = {"email":email , "firstName":firstName , "lastName" : lastName}
+          var firstName = document.getElementById("firstName").value;
+          var lastName = document.getElementById("lastName").value;
+          var dob = document.getElementById("dob").value;
+                  
+                   var value = {"firstName":firstName , "lastName" : lastName, "dob":dob}
 
                    try {
                        webkit.messageHandlers.sumbitToiOS.postMessage(value);

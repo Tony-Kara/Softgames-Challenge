@@ -10,14 +10,14 @@ import Foundation
 
 
 class UserData {
-    var username : String = ""
-    var email : String = ""
+    var firstName : String = ""
     var lastname : String = ""
+    var dob : String = ""
     
     
-    init(_ username:String , _ email:String , _ lastname : String) {
-        self.username = username
-        self.email = email
+    init(_ firstName:String , _ lastname:String , _ dob : String) {
+        self.firstName = firstName
         self.lastname = lastname
+        self.dob = dob
     }
 }

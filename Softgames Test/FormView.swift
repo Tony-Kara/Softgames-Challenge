@@ -14,7 +14,7 @@ class FormView: UIView {
   
   var sumbitButtonAction : ((UserData) -> ())?
   func webToiOSDataTransfer(data: UserData) {
-    titleTextField.text = data.username
+    titleTextField.text = data.firstName
 //    emailTxtField.text = data.email
 //    lastnameTxtField.text = data.lastname
     

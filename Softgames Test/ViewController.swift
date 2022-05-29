@@ -38,7 +38,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     formView.sumbitButtonAction = { userdata in
         
-        self.createJsonToPass(email: userdata.email , firstName: userdata.username , lastName: userdata.lastname)
+//        self.createJsonToPass(email: userdata.email , firstName: userdata.username , lastName: userdata.lastname)
+      self.createJsonToPass(firstName: userdata.firstName, lastName: userdata.lastname, dob: userdata.dob)
       self.formView.webView.evaluateJavaScript("fillDetails('\(self.jsonString)')") { (any, error) in
                            
             print("Error : \(error)")
@@ -47,9 +48,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
   }
 
   
-  func createJsonToPass(email : String , firstName : String = "" , lastName : String = "" ) {
+  func createJsonToPass( firstName : String = "" , lastName : String = "" , dob : String ) {
       
-      let data = ["email": email ,"firstName": firstName , "lastName": lastName] as [String : Any]
+      let data = ["firstName": firstName , "lastName": lastName, "dob": dob ,] as [String : Any]
       self.jsonString = createJsonForJavaScript(for: data)
       
   }
@@ -95,8 +96,8 @@ extension ViewController : WKScriptMessageHandler {
         let dict = message.body as? Dictionary<String, String>
         print(dict)
         
-        let userdata = UserData((dict?["firstName"])!, (dict?["email"])!, (dict?["lastName"])!)
-        
+        let userdata = UserData((dict?["firstName"])!, (dict?["lastName"])!, (dict?["dob"])!)
+       
         if message.name == "sumbitToiOS" {
             self.sumbitToiOS(user: userdata)
         }
