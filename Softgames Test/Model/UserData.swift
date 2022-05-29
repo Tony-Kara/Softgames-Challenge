@@ -1,11 +1,3 @@
-//
-//  UserData.swift
-//  WebKitDemo
-//
-//  Created by Mushtaque Ahmed on 10/15/19.
-//  Copyright © 2019 Mushtaque Ahmed. All rights reserved.
-//
-
 import Foundation
 
 
