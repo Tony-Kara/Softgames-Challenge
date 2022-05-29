@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEC2DC1D284014A3006EA898 /* sampleweb.html in Resources */ = {isa = PBXBuildFile; fileRef = CEC2DC1C284014A3006EA898 /* sampleweb.html */; };
 		CEEF2108283E170300D8FEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF2107283E170300D8FEB0 /* AppDelegate.swift */; };
 		CEEF210A283E170300D8FEB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */; };
 		CEEF210C283E170300D8FEB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF210B283E170300D8FEB0 /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CEC2DC1C284014A3006EA898 /* sampleweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleweb.html; sourceTree = "<group>"; };
 		CEEF2104283E170300D8FEB0 /* Softgames Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Softgames Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEF2107283E170300D8FEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 		CEEF2106283E170300D8FEB0 /* Softgames Test */ = {
 			isa = PBXGroup;
 			children = (
-				CEC2DC1C284014A3006EA898 /* sampleweb.html */,
 				CEEF2125283E527D00D8FEB0 /* Mytest */,
 				CEEF2107283E170300D8FEB0 /* AppDelegate.swift */,
 				CEEF2109283E170300D8FEB0 /* SceneDelegate.swift */,
@@ -152,7 +149,6 @@
 			files = (
 				CEEF2129283E527D00D8FEB0 /* index.html in Resources */,
 				CEEF212A283E527D00D8FEB0 /* script.js in Resources */,
-				CEC2DC1D284014A3006EA898 /* sampleweb.html in Resources */,
 				CEEF2114283E170400D8FEB0 /* LaunchScreen.storyboard in Resources */,
 				CEEF2111283E170400D8FEB0 /* Assets.xcassets in Resources */,
 			);

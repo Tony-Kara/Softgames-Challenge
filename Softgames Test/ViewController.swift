@@ -9,10 +9,18 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController, WKScriptMessageHandler {
+  
+  var b : String?
   func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-      
+    b = message.body as? String
+    guard let b = b else {return}
+    print(b)
       if message.name == mNativeToWebHandler {
-        formView.titleTextField.text = message.body as? String
+       
+      
+       // print(message.body)
+        var f = formView.titleTextField.text
+        f = message.body as? String
       }
   }
   
