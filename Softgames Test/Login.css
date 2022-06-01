@@ -10,7 +10,7 @@ div.container {
 div.inputContainer {
     width: 100%;
     height: 70%;
-   /* background-color: blueviolet; */  
+   /* background-color: blueviolet; */
     display: flex; /* or inline-flex */
     flex-direction: column;
     justify-content: center;

@@ -21,11 +21,11 @@ class FormView: UIView {
   private lazy var titleTextField:UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = "Result field * Softgames *"
+    textField.placeholder = "Result field * Softgames * "
     textField.keyboardType = UIKeyboardType.default
     textField.returnKeyType = UIReturnKeyType.done
     textField.autocorrectionType = UITextAutocorrectionType.no
-    textField.font = UIFont.systemFont(ofSize: 13)
+    textField.font = UIFont.systemFont(ofSize: 25)
     textField.borderStyle = UITextField.BorderStyle.roundedRect
     textField.clearButtonMode = UITextField.ViewMode.whileEditing;
     textField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
@@ -82,7 +82,7 @@ class FormView: UIView {
     
     queue.sync {
       // Since i am performing a single task, i choosed not to use dispatch work item and since a user is tapping the button, i preferred using .userInitiated qos
-      self.result = firstName + " " + lastName
+      self.result = firstName.capitalized + " " + lastName.capitalized
       DispatchQueue.main.async {
         self.titleTextField.text = self.result
       }

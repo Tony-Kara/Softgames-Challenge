@@ -37,6 +37,15 @@ class ViewController: UIViewController {
     formView.webView.configuration.userContentController = contentController
     formView.webView.configuration.userContentController.add(self, name: mNativeToWebHandler)
     formView.webView.configuration.userContentController.add(self, name: NativeToWebHandlerAynsc)
+    formView.webView.configuration.userContentController.addUserScript(self.getZoomDisableScript())
+  }
+  
+  private func getZoomDisableScript() -> WKUserScript {
+    let source: String = "var meta = document.createElement('meta');" +
+    "meta.name = 'viewport';" +
+    "meta.content = 'width=device-width, initial-scale=1.0, maximum- scale=1.0, user-scalable=no';" +
+    "var head = document.getElementsByTagName('head')[0];" + "head.appendChild(meta);"
+    return WKUserScript(source: source, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
   }
 }
 
