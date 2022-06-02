@@ -2,7 +2,7 @@ div.container {
     display: flex; 
     flex-direction: row;
     /* background-color: black; */
-    height: 500px;
+    height: 400px;
     align-items: center;
 }
 
@@ -18,14 +18,19 @@ div.inputContainer {
 
 }
 input.style {
-    background-color: whitesmoke;
+    background-color: #fff;
     width: 70%;
     height: 70px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 35px;
+    padding: 10px 0 8px 10px;
+    margin: 10px auto;
+    border-radius: 15px;
     color: black;
     font-size: 27px;    
+}
+
+input.date-input {
+  background-color: lightcoral;
+  color: #fff;
 }
 
 div.sumbitButtons {
@@ -33,17 +38,15 @@ div.sumbitButtons {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    
+    width: 60%;
 }
 
 button.style {
-    width: 70%;
-    height: 70px;
+    width: 100%;
     background-color:lightcoral;
     padding: 10px;
-    margin: 10px;
-    border-radius: 35px;
+    margin: 10px auto;
+    border-radius: 15px;
     color: white;
     font-size: 27px;
 }
